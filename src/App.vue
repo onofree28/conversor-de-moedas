@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <h1 class="center">Conversor de Moedas</h1>
     <div class="linha">
       <Conversor moeda-a="USD" moeda-b="BRL"/>
@@ -44,5 +44,11 @@ export default {
 }
 .center{
   text-align: center;
+}
+
+@media(min-width: 150px) and (max-width: 500px) {
+        .linha{
+          flex-wrap: wrap;
+        }
 }
 </style>

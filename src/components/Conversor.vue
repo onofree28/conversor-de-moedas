@@ -1,8 +1,8 @@
 <template>
     <div class="conversor">
         <h2>{{moedaA}} Para {{moedaB}}</h2>
-        <input type="text" v-model="moedaA_value" :placeholder="moedaA">
-        <input type="button" value="Converter" @click="converter">
+        <input class="campo-numero" type="number" v-model="moedaA_value" :placeholder="moedaA"><br>
+        <button class="btn-convert" @click="converter">Converter</button>
         <h2>{{moedaB_value}}</h2>
     </div>
 </template>
@@ -42,8 +42,30 @@ export default {
 
 <style scoped>
     .conversor{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
         padding: 20px;
         max-width: 300px;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+    }
+
+    .campo-numero {
+        width: 10vw;
+    }
+
+    .btn-convert{
+        background-color: #69cefd;
+        color: aliceblue;
+        border: none;
+        height: 25px;
+        font-size: 16px;
+    }
+
+    .btn-convert:hover{
+        cursor: pointer;
+        background-color: #69cefdc2;
     }
 </style>
